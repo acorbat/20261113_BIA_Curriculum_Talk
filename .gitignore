@@ -1,0 +1,17 @@
+_site/
+.quarto/
+__pycache__/
+*.pyc
+preview/
+
+/.quarto/
+
+# Local copies of references (not redistributed)
+refs/
+
+# Figures for the slides are generated into figures/out/ (tracked).
+# Anything a script writes directly into figures/ is a stray output.
+figures/*.png
+figures/*.gif
+figures/*.mp4
+figures/*.svg

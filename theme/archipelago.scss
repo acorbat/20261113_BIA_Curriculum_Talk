@@ -1,0 +1,135 @@
+/*-- scss:defaults --*/
+// Colours sampled from img/2026016_Agus_archipielago.png
+$red: #D1495B;
+$red-light: #D66977;
+$yellow: #EDAE49;
+$yellow-dark: #B7791F;
+$teal: #00798C;
+$teal-light: #2F909F;
+$ink: #1F2328;
+$muted: #6B7075;
+$line: #E3E5E8;
+$paper: #F6F6F4;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+$font-family-sans-serif: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+$presentation-font-size-root: 40px;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-color: $ink;
+$presentation-heading-font-weight: 700;
+$presentation-h2-font-size: 1.4em;
+$presentation-line-height: 1.35;
+$body-bg: #FFFFFF;
+$body-color: $ink;
+$link-color: $teal;
+$code-color: $red;
+$code-block-bg: $paper;
+
+/*-- scss:rules --*/
+.reveal .slides section h2 { letter-spacing: -0.015em; margin-bottom: 0.45em; }
+.reveal .slide-number, .reveal .footer { color: $muted; font-size: 16px !important; }
+.reveal .footer { bottom: 12px; }
+.reveal .progress { color: $teal; }
+
+/* Section kicker above titles ------------------------------------------- */
+.kicker { display: block; font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+          color: $muted; margin-bottom: 6px; }
+.kicker.red { color: $red; } .kicker.teal { color: $teal; } .kicker.yellow { color: $yellow-dark; }
+
+/* Island colours ---------------------------------------------------------- */
+.red { color: $red; } .teal { color: $teal; } .yellow { color: $yellow-dark; } .muted { color: $muted; }
+.small { font-size: 0.82em; } .xsmall { font-size: 20px; } .big { font-size: 1.1em; }
+.cite { position: absolute; bottom: 52px; left: 0; font-size: 17px; color: $muted; }
+.center { text-align: center; }
+
+/* Title slide ------------------------------------------------------------ */
+#title-slide { text-align: left; }
+.title-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 30px; align-items: center; height: 820px; }
+.title-grid h1 { font-size: 1.75em; line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 0.35em 0; }
+.title-grid h1 .sub { display: block; font-size: 0.62em; font-weight: 600; color: $teal; margin-top: 0.25em; letter-spacing: -0.01em; }
+.title-grid .who { font-size: 0.9em; font-weight: 600; margin-top: 0.6em; }
+.title-grid .where { font-size: 0.66em; color: $muted; }
+.title-grid .contact { font-size: 0.6em; color: $muted; margin-top: 1.2em; }
+.title-grid img { width: 100%; }
+
+/* Cards / pills ---------------------------------------------------------- */
+.cards { display: grid; gap: 22px; }
+.cards.three { grid-template-columns: repeat(3, 1fr); }
+.cards.two { grid-template-columns: repeat(2, 1fr); }
+.cards.four { grid-template-columns: repeat(4, 1fr); }
+.card { border: 2px solid $line; border-radius: 18px; padding: 24px 28px; background: #fff; font-size: 0.8em; line-height: 1.38; }
+.card .ct { display: block; font-size: 1.2em; font-weight: 700; margin: 0 0 0.35em 0; line-height: 1.2; }
+.card.red { border-color: $red-light; } .card.red .ct { color: $red; }
+.card.teal { border-color: $teal-light; } .card.teal .ct { color: $teal; }
+.card.yellow { border-color: $yellow; } .card.yellow .ct { color: $yellow-dark; }
+.card.grey { border-color: #B9BEC4; } .card.grey .ct { color: $ink; }
+.card.fill-red { background: rgba(209, 73, 91, 0.07); }
+.card.fill-teal { background: rgba(0, 121, 140, 0.07); }
+.card.fill-yellow { background: rgba(237, 174, 73, 0.10); }
+.card.fill-grey { background: $paper; }
+.card ul { margin: 0.2em 0 0 1em; padding: 0; } .card li { margin: 0.15em 0; }
+
+.pill { display: inline-block; padding: 5px 16px; margin: 5px 4px; border-radius: 999px; font-size: 23px; line-height: 1.3;
+        background: $paper; border: 1.5px solid $line; color: $ink; white-space: nowrap; }
+.pill.red { border-color: $red-light; background: rgba(209, 73, 91, 0.08); }
+.pill.teal { border-color: $teal-light; background: rgba(0, 121, 140, 0.08); }
+.pill.yellow { border-color: $yellow; background: rgba(237, 174, 73, 0.12); }
+.pill.grey { border-color: #B9BEC4; }
+
+/* Big numbers ------------------------------------------------------------ */
+.stat { text-align: center; }
+.stat .n { display: block; font-size: 2.1em; font-weight: 800; color: $teal; line-height: 1; letter-spacing: -0.03em; }
+.stat .l { display: block; font-size: 0.55em; color: $muted; margin-top: 0.3em; }
+
+/* Blind-spot matrix ------------------------------------------------------ */
+table.matrix { border-collapse: separate; border-spacing: 10px; font-size: 0.72em; margin: 0 auto; }
+table.matrix th { font-weight: 600; color: $ink; border: none !important; padding: 6px 10px; }
+table.matrix td { border-radius: 12px; text-align: center; padding: 22px 18px; width: 200px; font-weight: 600; border: none !important; }
+table.matrix td.hi { background: $teal; color: #fff; }
+table.matrix td.mid { background: #9FCFD6; color: $ink; }
+table.matrix td.lo { background: #FBE3E6; color: $red; border: 2px dashed $red-light !important; }
+table.matrix th.row { text-align: right; }
+
+/* Model diagram ---------------------------------------------------------- */
+.model { display: grid; grid-template-columns: 1fr 70px 1.25fr 70px 1.35fr; align-items: center; gap: 0; }
+.model .col { display: flex; flex-direction: column; gap: 14px; }
+.model .arrow { font-size: 1.6em; color: #B9BEC4; text-align: center; }
+.model .box { border-radius: 16px; padding: 18px 22px; font-size: 0.72em; line-height: 1.3; border: 2px solid $line; }
+.model .box b { font-size: 1.12em; }
+.model .core { background: $ink; color: #fff; border: none; padding: 40px 30px; font-size: 0.85em; }
+.model .core b { font-size: 1.25em; }
+
+/* Timeline --------------------------------------------------------------- */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; margin-top: 30px; }
+.timeline::before { content: ""; position: absolute; top: 38px; left: 4%; right: 4%; height: 4px; background: $line; }
+.timeline .m { position: relative; text-align: center; font-size: 0.78em; }
+.timeline .dot { width: 76px; height: 76px; font-size: 26px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center;
+                 justify-content: center; font-weight: 800; color: #fff; background: $teal; position: relative; z-index: 1; }
+.timeline .m:nth-child(1) .dot { background: $red; }
+.timeline .m:nth-child(3) .dot { background: $yellow-dark; }
+.timeline .m:nth-child(4) .dot { background: $ink; }
+
+/* Contact block ---------------------------------------------------------- */
+.contact-list { font-size: 0.75em; line-height: 1.7; }
+.contact-list .k { display: inline-block; width: 150px; color: $muted; }
+
+/* Video ------------------------------------------------------------------ */
+.reveal video { box-shadow: none; }
+.placeholder { border: 2px dashed $red-light; border-radius: 12px; padding: 5px 14px; margin: 5px 4px; color: $red; font-size: 23px; display: inline-block; }
+
+/* Quotes ----------------------------------------------------------------- */
+.reveal blockquote { border-left: 6px solid $teal; background: $paper; box-shadow: none; width: 92%; margin: 0.6em 0;
+                     padding: 18px 28px; font-style: normal; font-size: 0.78em; }
+.reveal blockquote .src { display: block; font-size: 0.75em; color: $muted; margin-top: 0.4em; }
+
+.reveal .slides img.shadow { box-shadow: 0 6px 30px rgba(0,0,0,0.12); border-radius: 10px; }
+
+.reveal h2 .kicker { margin-bottom: 4px; }
+.reveal pre code { font-size: 26px; line-height: 1.45; max-height: 640px; }
+.reveal table { font-size: 0.78em; }
+.reveal .smaller table { font-size: 0.62em; }
+.pills-big .pill { font-size: 30px; padding: 8px 22px; margin: 8px 6px; }
+.stack > * + * { margin-top: 18px; }
+.tight p { margin: 0.25em 0; }

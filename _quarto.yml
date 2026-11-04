@@ -1,0 +1,31 @@
+project:
+  type: default
+  output-dir: _site
+  render:
+    - index.qmd
+  resources:
+    - figures/out/
+    - img/
+
+format:
+  revealjs:
+    theme: [default, theme/archipelago.scss]
+    width: 1600
+    height: 900
+    margin: 0.05
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+    transition: fade
+    transition-speed: fast
+    controls: true
+    progress: true
+    preview-links: false
+    chalkboard: false
+    footer: "Corbat · GloBIAS 2026 · From Diverse Paths to a Common Core"
+    pdf-separate-fragments: false
+    title-slide-attributes:
+      data-background-color: "#FFFFFF"
+    link-external-newwindow: true
+    embed-resources: false
