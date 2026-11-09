@@ -1,7 +1,13 @@
 # CONTEXT — GloBIAS 2026 talk: "From Diverse Paths to a Common Core"
 
 Working context for building the slide deck. Read this first in any new session.
-Last updated: 2026-11-02.
+Last updated: 2026-11-09.
+
+## 0. Working conventions
+
+- **Git: small commits.** One logical change per commit, such as a single slide edit, one figure, or a docs update. Don't bundle unrelated changes. A push can carry several commits, and a clean history comes from many small, focused commits.
+- Commits are authored as Agustin Corbat <acorbat@df.uba.ar>. Commits made with Claude end with the Co-Authored-By / Claude-Session trailers.
+- The talk folder on Agustín's computer is the source of truth. Edit there (or sync to it), check the result, then commit.
 
 ## 1. The talk
 
