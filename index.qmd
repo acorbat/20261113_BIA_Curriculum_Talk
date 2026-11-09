@@ -27,7 +27,7 @@ lang: en
 </div>
 <div class="logos-corner right">
 <img src="img/logos/globias_logo.png" alt="GloBIAS — Global BioImage Analysts' Society" class="logo-globias">
-<img src="img/logos/labi_logo_slides.svg" alt="LABI — Latin America Bioimaging" class="logo-labi">
+<img src="img/logos/labi_logo_color_slides.png" alt="LABI — Latin America Bioimaging" class="logo-labi">
 </div>
 
 ::: {.notes}
@@ -329,7 +329,7 @@ what *every* bioimage analyst masters, at an agreed depth
 <br>
 
 ::: {.fragment .center}
-Like a degree: *ciclo básico* + *materias optativas*, countable in **ECTS**.
+Like a university degree: **core courses** + **electives**, countable in **ECTS**.
 :::
 
 ::: {.notes}
@@ -379,8 +379,9 @@ variables & types · functions & loops · paths & I/O · environments · version
 [Image ethics & integrity]{.pill}
 :::
 
-::: {.fragment .teal}
-Notice: no **teal** pillar yet.
+::: {.fragment .small}
+The three pillars come from the **physics** and **computing** islands.<br>
+[None covers the **biology** island yet.]{.teal}
 :::
 :::
 ::: {.column width="48%" .fragment}
@@ -396,7 +397,7 @@ It does **not** mean "become a physicist".
 :::
 
 ::: {.notes}
-**14:15 → 15:00.** Open questions I don't want to answer alone. Is three enough? Notice there's no biology pillar yet. And depth: the core is about recognising when something matters, not becoming an expert in everything. (Cut this slide if running late.)
+**14:15 → 15:00.** Open questions I don't want to answer alone. Is three enough? Notice that the three pillars come from the physics and computing islands: none covers the biology island (experimental design, biological context). And depth: the core is about recognising when something matters, not becoming an expert in everything. (Cut this slide if running late.)
 :::
 
 ## A prototype to argue with: `bia_curriculum`
@@ -479,7 +480,7 @@ Open · tool-agnostic · CC BY · background-aware · global
 ::: {.dot}
 M0
 :::
-**Kick-off**<br>at this meeting<br><span class="muted">sign-up · first call</span>
+**Kick-off**<br>at this meeting<br><span class="muted">conversations · first call</span>
 :::
 ::: {.m}
 ::: {.dot}
@@ -497,18 +498,18 @@ M6
 ::: {.dot}
 M12
 :::
-**Electives, bridges**<br>& a pilot course<br><span class="muted">tested with learners</span>
+**Electives & bridges**<br>mapped to modules<br><span class="muted">a first full map</span>
 :::
 :::
 
 <br><br>
 
 ::: {.center .muted .small}
-A proposed timeline, to be agreed together.
+M = months after kick-off. A proposed timeline, to be agreed together.
 :::
 
 ::: {.notes}
-**17:45 → 18:45.** A concrete first year: kick off now; survey the community on the core in three months; a v0.1 baseline mapped to existing modules at six months; and electives, bridge modules and a pilot course at twelve.
+**17:45 → 18:45.** A concrete first year: kick off now; survey the community on the core in three months; a v0.1 baseline mapped to existing modules at six months; and electives and bridge modules mapped at twelve. (M = months after kick-off.)
 :::
 
 ## Join us
@@ -517,29 +518,21 @@ A proposed timeline, to be agreed together.
 ::: {.column width="62%"}
 ![](figures/out/archipelago_route.png){fig-alt="The archipelago map with dashed routes from all three islands converging on a common core."}
 :::
-::: {.column width="38%"}
-<br>
+::: {.column width="38%" .join}
+<br><br>
 
-**Sign up for the Working Group**
+**Help draw the chart.**
 
-[SIGN-UP LINK — TBD]{.placeholder}
+Find me during the meeting<br>to discuss further,
 
-<br>
+or contact me later.
 
-**Find me during the meeting**
-
-[MEETING POINT — TBD]{.placeholder}
-
-<br>
-
-![](figures/out/qr_deck.svg){width="170" fig-alt="QR code to these slides"}
-
-[Slides: acorbat.github.io/20261113_BIA_Curriculum_Talk]{.xsmall}
+[Contact details on the next slide.]{.small .muted}
 :::
 :::
 
 ::: {.notes}
-**18:45 → 19:30.** If you want to help draw this chart, sign up. Everyone is welcome, from any island. All three routes, one common core.
+**18:45 → 19:30.** If you want to help draw this chart, come and find me during the meeting, or contact me later. Everyone is welcome, from any island. All three routes, one common core.
 :::
 
 ## Thank you!
@@ -548,21 +541,22 @@ A proposed timeline, to be agreed together.
 ::: {.column width="58%"}
 **Acknowledgements**
 
+[For their support]{.ack-h}
+
 <div class="logo-wall">
-<img src="img/logos/cma_logo_slides.svg" alt="Centro de Microscopías Avanzadas (CMA), FCEN–UBA" class="logo-cma">
-<img src="img/logos/departamento_fisica_fcen_uba.png" alt="Departamento de Física, FCEN–UBA" class="logo-fisica">
 <img src="img/logos/fundacen_logo.svg" alt="FUNDACEN" class="logo-fundacen">
 <img src="img/logos/globias_logo.png" alt="GloBIAS — Global BioImage Analysts' Society" class="logo-globias">
-<img src="img/logos/labi_logo_slides.svg" alt="LABI — Latin America Bioimaging" class="logo-labi">
+<img src="img/logos/departamento_fisica_fcen_uba.png" alt="Departamento de Física, FCEN–UBA" class="logo-fisica">
+</div>
+
+[For the discussions]{.ack-h}
+
+<div class="logo-wall">
+<img src="img/logos/cma_logo_slides.svg" alt="Centro de Microscopías Avanzadas (CMA), FCEN–UBA" class="logo-cma">
+<img src="img/logos/labi_logo_color_slides.png" alt="LABI — Latin America Bioimaging" class="logo-labi">
 </div>
 
 [Built on the NEUBIAS training resources (Tischer et al., 2026) and their authors' work.]{.xsmall .muted}
-
-::: {.contact-list}
-[email]{.k} acorbat@df.uba.ar<br>
-[Bluesky]{.k} [@acorbat.bsky.social](https://bsky.app/profile/acorbat.bsky.social)<br>
-[LinkedIn]{.k} [in/agustin-andres-corbat](https://www.linkedin.com/in/agustin-andres-corbat/)
-:::
 :::
 ::: {.column width="42%"}
 **Let's discuss**
@@ -573,12 +567,18 @@ A proposed timeline, to be agreed together.
 3. Who should own and maintain it?
 :::
 
-![](figures/out/qr_deck.svg){width="170" fig-alt="QR code to these slides"}
+**Contact**
+
+::: {.contact-list}
+[email]{.k} acorbat@df.uba.ar<br>
+[Bluesky]{.k} [@acorbat.bsky.social](https://bsky.app/profile/acorbat.bsky.social)<br>
+[LinkedIn]{.k} [in/agustin-andres-corbat](https://www.linkedin.com/in/agustin-andres-corbat/)
+:::
 :::
 :::
 
 ::: {.notes}
-**19:30 → 20:00.** Thanks to the Centro de Microscopías Avanzadas, the Physics Department, FUNDACEN, GloBIAS and LABI, and to the NEUBIAS training-resources authors whose work this builds on. Three questions to start the discussion.
+**19:30 → 20:00.** Thanks to FUNDACEN, GloBIAS and the Physics Department for their support, and to the Centro de Microscopías Avanzadas and LABI for the discussions that shaped this proposal. This builds on the NEUBIAS training resources. Three questions to start the discussion.
 :::
 
 # Backup {.unlisted background-color="#F6F6F4"}

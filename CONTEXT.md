@@ -104,8 +104,15 @@ Last updated: 2026-11-02.
 
 - **2026-11-09:** Zoom moved to Fiji x=350, y=225 (70 px), where parallel filaments sit in the upper right of the big cell. The profile line is at column 20 of the zoom and crosses about 6 filaments. The profile is drawn in teal (biology island) and its marker in white.
 
+- **2026-11-09:** Several edits after a speaker review:
+  - LABI now uses its colour logo (a cropped copy, `labi_logo_color_slides.png`).
+  - Slide 15 is in English: "core courses + electives".
+  - Slide 17 says explicitly that the three pillars come from the physics and computing islands and none covers biology.
+  - Slide 22: "M = months after kick-off" is explained, the pilot course is removed from M12, and M0 no longer mentions a sign-up.
+  - Slide 23 has no links or QR codes; it just says "find me during the meeting, or contact me later".
+  - Slide 24 has two acknowledgement groups (support: FUNDACEN, GloBIAS, Departamento de Física; discussions: CMA, LABI) and a Contact subtitle. Its deck QR code was dropped.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
-- Working Group logistics: sign-up channel and meeting point at the conference
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)
 - Whether to cite the Sivagurunathan et al. 2024 survey with numbers (not yet read; must be verified before use)

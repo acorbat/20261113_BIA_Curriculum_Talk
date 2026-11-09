@@ -50,9 +50,9 @@ Original material in this repository (slides, text, figures, code and the archip
 <https://creativecommons.org/licenses/by/4.0/>. Please attribute it to **Agustín Corbat** and link to this repository.
 Third-party material keeps its own terms (see Credits); this license does not relicense it.
 The institutional and community logos in `img/logos/` belong to their respective organisations and are **not** covered by
-CC BY 4.0. `cma_logo_slides.svg` and `labi_logo_slides.svg` are display copies of `cma_logo.svg` and `labi_logo.svg`:
-the first fixes the subtitle width for machines without the original fonts, the second is cropped and recoloured dark
-for white backgrounds.
+CC BY 4.0. Two display copies are used on the slides: `cma_logo_slides.svg` (from `cma_logo.svg`, with the subtitle
+width fixed for machines without the original fonts) and `labi_logo_color_slides.png` (the colour LABI logo
+`Isologotipo versión extendida.png`, cropped to remove its empty margins).
 
 ## Credits
 

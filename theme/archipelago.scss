@@ -153,3 +153,9 @@ table.matrix th.row { text-align: right; }
 .reveal .logo-wall .logo-fundacen { height: 50px; }
 .reveal .logo-wall .logo-globias { height: 100px; }
 .reveal .logo-wall .logo-labi { height: 62px; }
+
+/* Thank-you slide -------------------------------------------------------------- */
+.ack-h { display: block; font-size: 22px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+         color: $muted; margin: 18px 0 2px 0; }
+.reveal .logo-wall .logo-labi[src$=".png"], .reveal .logos-corner .logo-labi[src$=".png"] { height: 70px; }
+.join { font-size: 1.05em; line-height: 1.5; }
