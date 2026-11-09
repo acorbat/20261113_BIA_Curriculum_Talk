@@ -94,6 +94,8 @@ Last updated: 2026-11-02.
 
 - **2026-11-02:** LinkedIn corrected to https://www.linkedin.com/in/agustin-andres-corbat/. **Deck built** (Quarto + reveal.js, 1600×900, 24 main slides including 5 section dividers, plus 5 backup slides, speaker notes with target times). Repo to be created by Agustín from this folder; GitHub Pages via Actions (`.github/workflows/publish.yml`). Deck URL assumed `https://acorbat.github.io/20261113_BIA_Curriculum_Talk/` (used in the QR codes).
 
+- **2026-11-09:** Git repo cleaned before the first push. Old animation outputs in `figures/` deleted and purged from history. `refs/` is now git-ignored and purged from history (kept locally). Stray outputs in `figures/` are ignored, while `figures/out/` (used by the slides) and all generating code stay tracked. `CONTEXT.md` and `PLAN.md` are tracked. Added LICENSE (CC BY 4.0) and a License section in the README.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Working Group logistics: sign-up channel and meeting point at the conference

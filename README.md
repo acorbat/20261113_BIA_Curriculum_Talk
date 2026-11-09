@@ -16,7 +16,7 @@ Live slides: <https://acorbat.github.io/20261113_BIA_Curriculum_Talk/> (once Git
 | `figures/screenshot_explorer.js` | Playwright script used to screenshot the `bia_curriculum` explorer |
 | `img/` | Archipelago map; `img/microtubules/` takes the microtubule image (see README there) |
 | `PLAN.md`, `CONTEXT.md` | Talk plan, source summaries and decisions log |
-| `refs/` | Tischer et al. 2026 (open access, CC BY) |
+| `refs/` | Local copies of cited papers (git-ignored, not redistributed) |
 
 ## Build locally
 
@@ -42,6 +42,13 @@ Offline backup: open `_site/index.html` from a local copy, or print to PDF from 
 
 If you name the repo something other than `20261113_BIA_Curriculum_Talk`, update `DECK_URL` in
 `figures/make_figures.py`, re-run it (to refresh the QR codes), and update the URL on the "Join us" slide.
+
+## License
+
+Original material in this repository (slides, text, figures, code and the archipelago illustration) is licensed under the
+**Creative Commons Attribution 4.0 International (CC BY 4.0)** license; see [`LICENSE`](LICENSE) or
+<https://creativecommons.org/licenses/by/4.0/>. Please attribute it to **Agustín Corbat** and link to this repository.
+Third-party material keeps its own terms (see Credits); this license does not relicense it.
 
 ## Credits
 
