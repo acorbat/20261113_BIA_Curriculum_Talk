@@ -98,9 +98,10 @@ Last updated: 2026-11-02.
 
 - **2026-11-09:** Logos added. Cover: Departamento de Física + CMA bottom-left, GloBIAS + LABI bottom-right, footer hidden. Thank-you slide (which also holds the contact details): logos of CMA, Departamento de Física, FUNDACEN, GloBIAS and LABI, plus a credit line for the NEUBIAS training resources. Display copies made of the CMA logo (subtitle width fixed) and the LABI logo (white original, cropped and recoloured dark).
 
+- **2026-11-09:** Biologist slide now uses the tubulin channel of the Fiji sample *Fluorescent Cells* (public domain; `img/microtubules/C2-FluorescentCells.png`). Fiji's burned-in info text is cropped off. The zoom box (rows 370–440, cols 340–410) shows filaments fanning out at the cell edge, with contrast set within the zoom. The image has no calibration, so the slide stays qualitative.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Working Group logistics: sign-up channel and meeting point at the conference
-- Microtubule image saved into `img/microtubules/`
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)
 - Whether to cite the Sivagurunathan et al. 2024 survey with numbers (not yet read; must be verified before use)

@@ -56,6 +56,6 @@ for white backgrounds.
 
 ## Credits
 
-- Microtubule image (once added): H. Vindin, CC BY 4.0, Wikimedia Commons.
+- Microtubule image: *Fluorescent Cells* (BPAE cells, anti-tubulin channel), ImageJ/Fiji sample image, public domain.
 - Module data: NEUBIAS Bioimage Analysis Training Resources (CC BY 4.0); Tischer et al. 2026, *J. Microsc.* 304:3–14.
 - Curriculum prototype: <https://github.com/acorbat/bia_curriculum> (CC BY 4.0).

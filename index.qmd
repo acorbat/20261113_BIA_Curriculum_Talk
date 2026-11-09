@@ -259,7 +259,7 @@ image = object ⊗ PSF
 
 ::: {.columns}
 ::: {.column width="58%"}
-![](figures/out/biologist_microtubules.png){fig-alt="Confocal image of tubulin-stained cells with a zoomed region showing filaments that are all about as wide as the PSF."}
+![](figures/out/biologist_microtubules.png){fig-alt="Fluorescence image of tubulin-stained BPAE cells (Fiji sample Fluorescent Cells) with a zoomed region showing filaments that are all about as wide as the PSF."}
 :::
 ::: {.column width="42%"}
 A microtubule is **~25 nm** wide.<br>
@@ -276,7 +276,7 @@ In your image it looks **~200 nm** wide.
 :::
 
 ::: {.notes}
-**8:30 → 9:30.** For a biologist: start from a structure they know. Microtubules are 25 nm, yet every filament in a confocal image is about 8 times wider. So if you measure widths, you're measuring the microscope. If two filaments are closer than about 200 nm, they become one.
+**8:30 → 9:30.** For a biologist: start from a structure they know. Microtubules are 25 nm, yet every filament in a fluorescence image is about 8 times wider. So if you measure widths, you're measuring the microscope. If two filaments are closer than about 200 nm, they become one.
 :::
 
 ## [Resolution, explained to]{.kicker .red} …a research software engineer
@@ -638,5 +638,5 @@ audience_prior_knowledge: {biology: low, physics: medium, computer_science: low}
 - Seitz A, Guiet R, Burri O, Chiaruttini N. EPFLx *Image Processing and Analysis for Life Scientists* (edX)
 - Haase R. *BioImage Analysis* lecture series (YouTube) · ZIDAS · NEUBIAS Academy
 - Zhang B, Zerubia J, Olivo-Marin J-C (2007). Gaussian approximations of fluorescence microscope PSF models. *Appl. Opt.* 46:1819–1829
-- Microtubule image: H. Vindin, *Microtubules in Primary Mouse Embryonic Fibroblasts*, CC BY 4.0, Wikimedia Commons
+- Microtubule image: *Fluorescent Cells* (BPAE cells, anti-tubulin channel), ImageJ/Fiji sample image, public domain
 - Curriculum prototype: github.com/acorbat/bia_curriculum (CC BY 4.0)

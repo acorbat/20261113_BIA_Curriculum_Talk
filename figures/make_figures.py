@@ -213,7 +213,21 @@ def airy():
 # ===========================================================================
 # Biologist slide (9)
 # ===========================================================================
-ZOOM_CENTRE = (0.30, 0.42)   # (row, col) of the zoom box's top-left corner, as fractions of the image
+# Per-image settings for the biologist slide, keyed by a substring of the file name.
+#   crop  : (row0, row1, col0, col1) region kept from the image (None = whole image)
+#   zoom  : (row, col, size) of the zoom box, in pixels of the cropped image
+#   credit: line printed under the figure
+MICROTUBULE_SOURCES = {
+    "FluorescentCells": dict(           # Fiji › File › Open Samples › Fluorescent Cells, tubulin channel
+        crop=(0, 465, 0, 512),           # drops Fiji's burned-in "Press 'I' (Image>Show Info)…" overlay
+        zoom=(370, 340, 70),
+        credit="Image: Fluorescent Cells (BPAE cells, anti-tubulin), ImageJ/Fiji sample image, public domain",
+    ),
+    "Vindin": dict(
+        crop=None, zoom=None,
+        credit="Image: H. Vindin, Microtubules in primary mouse embryonic fibroblasts, CC BY 4.0, Wikimedia Commons",
+    ),
+}
 CYAN = LinearSegmentedColormap.from_list("cyan", ["black", "#0B4F5A", "#2FB5C8", "#DFFBFF"])
 
 
@@ -240,27 +254,32 @@ def _simulated_network(n=900, px_nm=65.0, seed=3):
 
 
 def biologist():
-    src = sorted((ROOT / "img" / "microtubules").glob("*.png")) + \
-        sorted((ROOT / "img" / "microtubules").glob("*.tif*"))
+    folder = ROOT / "img" / "microtubules"
+    src = sorted(p for p in folder.glob("*") if p.suffix.lower() in (".png", ".tif", ".tiff", ".jpg"))
     simulated = not src
+    cfg = dict(crop=None, zoom=None, credit=None)
     if simulated:
         img = _simulated_network()
     else:
-        im = np.asarray(Image.open(src[0]).convert("RGB")).astype(float)
-        img = im.max(axis=2) if im[..., 1].mean() > 0 else im[..., 0]     # tubulin channel (cyan/green)
-        if "Fluorescent" in src[0].name or "fluorescent" in src[0].name:
-            img = im[..., 1]                                             # Fiji sample: green = tubulin
+        cfg.update(next((c for k, c in MICROTUBULE_SOURCES.items() if k.lower() in src[0].name.lower()), {}))
+        rgb = np.asarray(Image.open(src[0]).convert("RGB")).astype(float)
+        img = rgb.max(axis=2)                  # single-colour LUT (cyan, green…): brightest channel = intensity
+        if cfg["crop"]:
+            r0, r1, c0, c1 = cfg["crop"]
+            img = img[r0:r1, c0:c1]
     img = (img - np.percentile(img, 1)) / (np.percentile(img, 99.7) - np.percentile(img, 1))
     img = np.clip(img, 0, 1)
 
     h, w = img.shape
-    # zoom box: brightest-edge-free region with filaments, 1/6 of the field
-    bs = h // 6
-    cy, cx = int(h * ZOOM_CENTRE[0]), int(w * ZOOM_CENTRE[1])
-    fig, axs = plt.subplots(1, 2, figsize=(12, 6), gridspec_kw=dict(width_ratios=[1, 1], wspace=0.06))
+    cy, cx, bs = cfg["zoom"] or (int(h * 0.30), int(w * 0.42), h // 6)
+    fig, axs = plt.subplots(1, 2, figsize=(6 * (w / h + 1) + 0.4, 6),
+                            gridspec_kw=dict(width_ratios=[w / h, 1], wspace=0.04))
     axs[0].imshow(img, cmap=CYAN, interpolation="lanczos")
-    axs[0].add_patch(plt.Rectangle((cx, cy), bs, bs, fill=False, ec="white", lw=2))
-    axs[1].imshow(zoom(img[cy:cy + bs, cx:cx + bs], 1, order=1), cmap=CYAN, interpolation="nearest")
+    axs[0].add_patch(plt.Rectangle((cx - 0.5, cy - 0.5), bs, bs, fill=False, ec="white", lw=2))
+    z = img[cy:cy + bs, cx:cx + bs]
+    lo, hi = np.percentile(z, 1), np.percentile(z, 99.5)      # contrast set within the zoom
+    axs[1].imshow(np.clip((z - lo) / (hi - lo), 0, 1), cmap=CYAN, interpolation="bicubic")
+    fig.subplots_adjust(left=0.005, right=0.995, top=0.92, bottom=0.07)
     for ax in axs:
         _clean(ax)
     axs[1].set_title("zoom: every filament is ~PSF wide", fontsize=16, color=INK)
@@ -269,8 +288,7 @@ def biologist():
                     fontsize=34, color="white", alpha=0.35, fontweight="bold", rotation=20)
         credit = "Simulated network (placeholder): replace with img/microtubules/<image>.png"
     else:
-        credit = ("Image: H. Vindin, Microtubules in primary mouse embryonic fibroblasts, CC BY 4.0, Wikimedia Commons"
-                  if "Vindin" in src[0].name else f"Image: {src[0].stem}")
+        credit = cfg["credit"] or f"Image: {src[0].stem}"
     fig.text(0.01, 0.0, credit, fontsize=11, color=MUTED)
     fig.savefig(OUT / "biologist_microtubules.png")
     plt.close(fig)
