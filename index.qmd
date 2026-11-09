@@ -519,7 +519,7 @@ M = months after kick-off. A proposed timeline, to be agreed together.
 ![](figures/out/archipelago_route.png){fig-alt="The archipelago map with dashed routes from all three islands converging on a common core."}
 :::
 ::: {.column width="38%" .join}
-<br><br>
+<br>
 
 **Help draw the chart.**
 
@@ -528,6 +528,10 @@ Find me during the meeting<br>to discuss further,
 or contact me later.
 
 [Contact details on the next slide.]{.small .muted}
+
+![](figures/out/qr_deck.svg){width="170" fig-alt="QR code to these slides"}
+
+[These slides]{.xsmall .muted}
 :::
 :::
 

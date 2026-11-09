@@ -116,7 +116,7 @@ Last updated: 2026-11-09.
   - Slide 17 says explicitly that the three pillars come from the physics and computing islands and none covers biology.
   - Slide 22: "M = months after kick-off" is explained, the pilot course is removed from M12, and M0 no longer mentions a sign-up.
   - Slide 23 has no links or QR codes; it just says "find me during the meeting, or contact me later".
-  - Slide 24 has two acknowledgement groups (support: FUNDACEN, GloBIAS, Departamento de Física; discussions: CMA, LABI) and a Contact subtitle. Its deck QR code was dropped.
+  - Slide 24 has two acknowledgement groups (support: FUNDACEN, GloBIAS, Departamento de Física; discussions: CMA, LABI) and a Contact subtitle. Its deck QR code moved to slide 23 ("These slides"), the only link in the deck.
 
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
