@@ -329,7 +329,7 @@ what *every* bioimage analyst masters, at an agreed depth
 <br>
 
 ::: {.fragment .center}
-Like a university degree: **core courses** + **electives**, countable in **ECTS**.
+Like a degree: *ciclo básico* + *materias optativas*, countable in **ECTS**.
 :::
 
 ::: {.notes}

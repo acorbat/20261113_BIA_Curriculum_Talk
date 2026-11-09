@@ -112,7 +112,7 @@ Last updated: 2026-11-09.
 
 - **2026-11-09:** Several edits after a speaker review:
   - LABI now uses its colour logo (a cropped copy, `labi_logo_color_slides.png`).
-  - Slide 15 is in English: "core courses + electives".
+  - Slide 15 was briefly put in English, but the speaker chose to keep the Spanish *ciclo básico* + *materias optativas*.
   - Slide 17 says explicitly that the three pillars come from the physics and computing islands and none covers biology.
   - Slide 22: "M = months after kick-off" is explained, the pilot course is removed from M12, and M0 no longer mentions a sign-up.
   - Slide 23 has no links or QR codes; it just says "find me during the meeting, or contact me later".
