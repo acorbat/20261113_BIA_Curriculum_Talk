@@ -222,8 +222,8 @@ def airy():
 MICROTUBULE_SOURCES = {
     "FluorescentCells": dict(           # Fiji › File › Open Samples › Fluorescent Cells, tubulin channel
         crop=(0, 465, 0, 512),           # drops Fiji's burned-in "Press 'I' (Image>Show Info)…" overlay
-        zoom=(370, 340, 70),
-        profile=dict(col=40, rows=(6, 60), width=5),   # vertical line in zoom coordinates, crossing ~7 filaments
+        zoom=(225, 350, 70),                           # Fiji x=350, y=225: parallel filaments, upper right of the big cell
+        profile=dict(col=20, rows=(4, 64), width=5),   # vertical line in zoom coordinates, crossing ~6 filaments
         credit="Image: Fluorescent Cells, ImageJ/Fiji sample (public domain)",
     ),
     "Vindin": dict(
@@ -292,15 +292,15 @@ def biologist():
     zlo, zhi = np.percentile(z_raw, 1), np.percentile(z_raw, 99.5)  # contrast set within the zoom
     ax_z.imshow(np.clip((z_raw - zlo) / (zhi - zlo), 0, 1), cmap=CYAN, interpolation="nearest")
     c, (p0, p1), pw = prof["col"], prof["rows"], prof["width"]
-    ax_z.add_patch(plt.Rectangle((c - pw / 2, p0 - 0.5), pw, p1 - p0, fill=False, ec=YELLOW, lw=2))
+    ax_z.add_patch(plt.Rectangle((c - pw / 2, p0 - 0.5), pw, p1 - p0, fill=False, ec="white", lw=2))
     for ax in (ax_o, ax_z):
         _clean(ax)
     ax_z.set_title("zoom (raw pixels)", fontsize=17, color=INK)
 
     values = z_raw[p0:p1, c - pw // 2:c + pw // 2 + 1].mean(axis=1)
     pos = np.arange(p0, p1) - p0
-    ax_p.step(pos, values, where="mid", color=YELLOW, lw=2.2)
-    ax_p.fill_between(pos, values, step="mid", color=YELLOW, alpha=0.18, lw=0)
+    ax_p.step(pos, values, where="mid", color=TEAL, lw=2.2)          # biology island colour
+    ax_p.fill_between(pos, values, step="mid", color=TEAL_L, alpha=0.25, lw=0)
     ax_p.set_xlim(pos[0] - 0.5, pos[-1] + 0.5)
     ax_p.set_xlabel("pixels along the line", fontsize=16)
     ax_p.set_ylabel("intensity", fontsize=16)
