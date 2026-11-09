@@ -15,3 +15,6 @@ figures/*.png
 figures/*.gif
 figures/*.mp4
 figures/*.svg
+
+# Files the Claude desktop app saves from chats
+Claude outputs/

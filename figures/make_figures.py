@@ -216,15 +216,18 @@ def airy():
 # Per-image settings for the biologist slide, keyed by a substring of the file name.
 #   crop  : (row0, row1, col0, col1) region kept from the image (None = whole image)
 #   zoom  : (row, col, size) of the zoom box, in pixels of the cropped image
+#   profile: vertical line inside the zoom (col, (row0, row1), width in px averaged across)
 #   credit: line printed under the figure
+# All panels show raw pixels (no interpolation); the profile uses the raw 8-bit values.
 MICROTUBULE_SOURCES = {
     "FluorescentCells": dict(           # Fiji › File › Open Samples › Fluorescent Cells, tubulin channel
         crop=(0, 465, 0, 512),           # drops Fiji's burned-in "Press 'I' (Image>Show Info)…" overlay
         zoom=(370, 340, 70),
-        credit="Image: Fluorescent Cells (BPAE cells, anti-tubulin), ImageJ/Fiji sample image, public domain",
+        profile=dict(col=40, rows=(6, 60), width=5),   # vertical line in zoom coordinates, crossing ~7 filaments
+        credit="Image: Fluorescent Cells, ImageJ/Fiji sample (public domain)",
     ),
     "Vindin": dict(
-        crop=None, zoom=None,
+        crop=None, zoom=None, profile=None,
         credit="Image: H. Vindin, Microtubules in primary mouse embryonic fibroblasts, CC BY 4.0, Wikimedia Commons",
     ),
 }
@@ -257,39 +260,60 @@ def biologist():
     folder = ROOT / "img" / "microtubules"
     src = sorted(p for p in folder.glob("*") if p.suffix.lower() in (".png", ".tif", ".tiff", ".jpg"))
     simulated = not src
-    cfg = dict(crop=None, zoom=None, credit=None)
+    cfg = dict(crop=None, zoom=None, profile=None, credit=None)
     if simulated:
-        img = _simulated_network()
+        raw = _simulated_network()
     else:
         cfg.update(next((c for k, c in MICROTUBULE_SOURCES.items() if k.lower() in src[0].name.lower()), {}))
-        rgb = np.asarray(Image.open(src[0]).convert("RGB")).astype(float)
-        img = rgb.max(axis=2)                  # single-colour LUT (cyan, green…): brightest channel = intensity
+        im = Image.open(src[0])
+        raw = np.asarray(im.convert("RGB")).max(axis=2).astype(float) if im.mode in ("P", "RGB", "RGBA") \
+            else np.asarray(im).astype(float)  # single-colour LUT: brightest channel = intensity
         if cfg["crop"]:
             r0, r1, c0, c1 = cfg["crop"]
-            img = img[r0:r1, c0:c1]
-    img = (img - np.percentile(img, 1)) / (np.percentile(img, 99.7) - np.percentile(img, 1))
-    img = np.clip(img, 0, 1)
+            raw = raw[r0:r1, c0:c1]
+    lo, hi = np.percentile(raw, 1), np.percentile(raw, 99.7)
+    disp = np.clip((raw - lo) / (hi - lo), 0, 1)              # display only; profile uses raw values
 
-    h, w = img.shape
+    h, w = raw.shape
     cy, cx, bs = cfg["zoom"] or (int(h * 0.30), int(w * 0.42), h // 6)
-    fig, axs = plt.subplots(1, 2, figsize=(6 * (w / h + 1) + 0.4, 6),
-                            gridspec_kw=dict(width_ratios=[w / h, 1], wspace=0.04))
-    axs[0].imshow(img, cmap=CYAN, interpolation="lanczos")
-    axs[0].add_patch(plt.Rectangle((cx - 0.5, cy - 0.5), bs, bs, fill=False, ec="white", lw=2))
-    z = img[cy:cy + bs, cx:cx + bs]
-    lo, hi = np.percentile(z, 1), np.percentile(z, 99.5)      # contrast set within the zoom
-    axs[1].imshow(np.clip((z - lo) / (hi - lo), 0, 1), cmap=CYAN, interpolation="bicubic")
-    fig.subplots_adjust(left=0.005, right=0.995, top=0.92, bottom=0.07)
-    for ax in axs:
+    prof = cfg["profile"] or dict(col=bs // 2, rows=(2, bs - 2), width=3)
+
+    from matplotlib.gridspec import GridSpec
+    H = 6.0
+    right_w = H * 0.62                                          # zoom is square, 62 % of the height
+    fig = plt.figure(figsize=(H * w / h + right_w + 0.5, H))
+    gs = GridSpec(2, 2, figure=fig, width_ratios=[H * w / h, right_w], height_ratios=[0.62, 0.38],
+                  left=0.005, right=0.99, top=0.93, bottom=0.10, wspace=0.07, hspace=0.36)
+    ax_o = fig.add_subplot(gs[:, 0]); ax_z = fig.add_subplot(gs[0, 1]); ax_p = fig.add_subplot(gs[1, 1])
+
+    ax_o.imshow(disp, cmap=CYAN, interpolation="nearest")
+    ax_o.add_patch(plt.Rectangle((cx - 0.5, cy - 0.5), bs, bs, fill=False, ec="white", lw=2))
+    z_raw = raw[cy:cy + bs, cx:cx + bs]
+    zlo, zhi = np.percentile(z_raw, 1), np.percentile(z_raw, 99.5)  # contrast set within the zoom
+    ax_z.imshow(np.clip((z_raw - zlo) / (zhi - zlo), 0, 1), cmap=CYAN, interpolation="nearest")
+    c, (p0, p1), pw = prof["col"], prof["rows"], prof["width"]
+    ax_z.add_patch(plt.Rectangle((c - pw / 2, p0 - 0.5), pw, p1 - p0, fill=False, ec=YELLOW, lw=2))
+    for ax in (ax_o, ax_z):
         _clean(ax)
-    axs[1].set_title("zoom: every filament is ~PSF wide", fontsize=16, color=INK)
+    ax_z.set_title("zoom (raw pixels)", fontsize=17, color=INK)
+
+    values = z_raw[p0:p1, c - pw // 2:c + pw // 2 + 1].mean(axis=1)
+    pos = np.arange(p0, p1) - p0
+    ax_p.step(pos, values, where="mid", color=YELLOW, lw=2.2)
+    ax_p.fill_between(pos, values, step="mid", color=YELLOW, alpha=0.18, lw=0)
+    ax_p.set_xlim(pos[0] - 0.5, pos[-1] + 0.5)
+    ax_p.set_xlabel("pixels along the line", fontsize=16)
+    ax_p.set_ylabel("intensity", fontsize=16)
+    ax_p.tick_params(labelsize=14)
+    ax_p.set_title("each filament → a wide peak", fontsize=17, color=INK)
+
     if simulated:
-        axs[0].text(0.5, 0.5, "SIMULATED\nplaceholder", transform=axs[0].transAxes, ha="center", va="center",
-                    fontsize=34, color="white", alpha=0.35, fontweight="bold", rotation=20)
-        credit = "Simulated network (placeholder): replace with img/microtubules/<image>.png"
+        ax_o.text(0.5, 0.5, "SIMULATED\nplaceholder", transform=ax_o.transAxes, ha="center", va="center",
+                  fontsize=34, color="white", alpha=0.35, fontweight="bold", rotation=20)
+        credit = "Simulated network (placeholder): replace with img/microtubules/<image>.tif"
     else:
         credit = cfg["credit"] or f"Image: {src[0].stem}"
-    fig.text(0.01, 0.0, credit, fontsize=11, color=MUTED)
+    fig.text(0.005, 0.0, credit, fontsize=12, color=MUTED)
     fig.savefig(OUT / "biologist_microtubules.png")
     plt.close(fig)
 

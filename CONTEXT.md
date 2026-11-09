@@ -100,6 +100,8 @@ Last updated: 2026-11-02.
 
 - **2026-11-09:** Biologist slide now uses the tubulin channel of the Fiji sample *Fluorescent Cells* (public domain; `img/microtubules/C2-FluorescentCells.png`). Fiji's burned-in info text is cropped off. The zoom box (rows 370–440, cols 340–410) shows filaments fanning out at the cell edge, with contrast set within the zoom. The image has no calibration, so the slide stays qualitative.
 
+- **2026-11-09:** Biologist figure switched to the TIFF (`C2-FluorescentCells.tif`, which is pixel-identical to the PNG it replaces). All panels show raw pixels with no interpolation. Added an intensity profile along a 5-px-wide vertical line in the zoom, which crosses about 7 filaments, each a peak several pixels wide. Profile x-axis is in pixels, since the image has no calibration.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Working Group logistics: sign-up channel and meeting point at the conference
