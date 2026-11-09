@@ -4,7 +4,7 @@ author: "Agustín Corbat"
 lang: en
 ---
 
-## {#title .unnumbered .unlisted}
+## {#title .unnumbered .unlisted data-state="hide-footer"}
 
 ::: {.title-grid}
 ::: {}
@@ -20,6 +20,15 @@ lang: en
 ![](img/2026016_Agus_archipielago.png){fig-alt="Folded map of an archipelago with three islands: computing (red), biology (teal) and optics (yellow), with sailboats travelling between them."}
 :::
 :::
+
+<div class="logos-corner left">
+<img src="img/logos/departamento_fisica_fcen_uba.png" alt="Departamento de Física, FCEN–UBA" class="logo-fisica">
+<img src="img/logos/cma_logo_slides.svg" alt="Centro de Microscopías Avanzadas" class="logo-cma">
+</div>
+<div class="logos-corner right">
+<img src="img/logos/globias_logo.png" alt="GloBIAS — Global BioImage Analysts' Society" class="logo-globias">
+<img src="img/logos/labi_logo_slides.svg" alt="LABI — Latin America Bioimaging" class="logo-labi">
+</div>
 
 ::: {.notes}
 **0:00 → 0:30.** Hi, I'm Agustín. This talk is half proposal, half invitation. By the end I'll ask you to help start a Working Group.
@@ -536,17 +545,18 @@ A proposed timeline, to be agreed together.
 ## Thank you!
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="58%"}
 **Acknowledgements**
 
-::: {.small}
-Centro de Microscopías Avanzadas (CMA), FCEN–UBA<br>
-GloBIAS<br>
-LABI · Latin America Bioimaging<br>
-The authors of the NEUBIAS training resources
-:::
+<div class="logo-wall">
+<img src="img/logos/cma_logo_slides.svg" alt="Centro de Microscopías Avanzadas (CMA), FCEN–UBA" class="logo-cma">
+<img src="img/logos/departamento_fisica_fcen_uba.png" alt="Departamento de Física, FCEN–UBA" class="logo-fisica">
+<img src="img/logos/fundacen_logo.svg" alt="FUNDACEN" class="logo-fundacen">
+<img src="img/logos/globias_logo.png" alt="GloBIAS — Global BioImage Analysts' Society" class="logo-globias">
+<img src="img/logos/labi_logo_slides.svg" alt="LABI — Latin America Bioimaging" class="logo-labi">
+</div>
 
-<br>
+[Built on the NEUBIAS training resources (Tischer et al., 2026) and their authors' work.]{.xsmall .muted}
 
 ::: {.contact-list}
 [email]{.k} acorbat@df.uba.ar<br>
@@ -554,7 +564,7 @@ The authors of the NEUBIAS training resources
 [LinkedIn]{.k} [in/agustin-andres-corbat](https://www.linkedin.com/in/agustin-andres-corbat/)
 :::
 :::
-::: {.column width="50%"}
+::: {.column width="42%"}
 **Let's discuss**
 
 ::: {.small}
@@ -563,12 +573,12 @@ The authors of the NEUBIAS training resources
 3. Who should own and maintain it?
 :::
 
-![](figures/out/qr_deck.svg){width="150" fig-alt="QR code to these slides"}
+![](figures/out/qr_deck.svg){width="170" fig-alt="QR code to these slides"}
 :::
 :::
 
 ::: {.notes}
-**19:30 → 20:00.** Thanks to CMA, GloBIAS, LABI, and the NEUBIAS training-resources authors whose work this builds on. Three questions to start the discussion.
+**19:30 → 20:00.** Thanks to the Centro de Microscopías Avanzadas, the Physics Department, FUNDACEN, GloBIAS and LABI, and to the NEUBIAS training-resources authors whose work this builds on. Three questions to start the discussion.
 :::
 
 # Backup {.unlisted background-color="#F6F6F4"}

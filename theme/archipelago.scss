@@ -46,7 +46,7 @@ $code-block-bg: $paper;
 
 /* Title slide ------------------------------------------------------------ */
 #title-slide { text-align: left; }
-.title-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 30px; align-items: center; height: 820px; }
+.title-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 30px; align-items: center; height: 700px; }
 .title-grid h1 { font-size: 1.75em; line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 0.35em 0; }
 .title-grid h1 .sub { display: block; font-size: 0.62em; font-weight: 600; color: $teal; margin-top: 0.25em; letter-spacing: -0.01em; }
 .title-grid .who { font-size: 0.9em; font-weight: 600; margin-top: 0.6em; }
@@ -133,3 +133,23 @@ table.matrix th.row { text-align: right; }
 .pills-big .pill { font-size: 30px; padding: 8px 22px; margin: 8px 6px; }
 .stack > * + * { margin-top: 18px; }
 .tight p { margin: 0.25em 0; }
+
+/* Hide footer and slide number on the cover --------------------------------- */
+.hide-footer .reveal .footer, .hide-footer .reveal .slide-number,
+.reveal.hide-footer .footer, .reveal.hide-footer .slide-number { display: none !important; }
+
+/* Logos ------------------------------------------------------------------------ */
+.reveal .logos-corner { position: absolute; bottom: 0; display: flex; align-items: center; gap: 44px; }
+.reveal .logos-corner.left { left: 0; }
+.reveal .logos-corner.right { right: 0; }
+.reveal .logos-corner img, .reveal .logo-wall img { margin: 0; max-width: none; max-height: none; box-shadow: none; }
+.reveal .logos-corner .logo-fisica { height: 74px; }
+.reveal .logos-corner .logo-cma { height: 92px; }
+.reveal .logos-corner .logo-globias { height: 104px; }
+.reveal .logos-corner .logo-labi { height: 64px; }
+.reveal .logo-wall { display: flex; flex-wrap: wrap; align-items: center; gap: 30px 46px; margin: 18px 0 10px 0; }
+.reveal .logo-wall .logo-cma { height: 92px; }
+.reveal .logo-wall .logo-fisica { height: 70px; }
+.reveal .logo-wall .logo-fundacen { height: 50px; }
+.reveal .logo-wall .logo-globias { height: 100px; }
+.reveal .logo-wall .logo-labi { height: 62px; }

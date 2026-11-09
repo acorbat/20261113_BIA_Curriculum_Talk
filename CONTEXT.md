@@ -96,6 +96,8 @@ Last updated: 2026-11-02.
 
 - **2026-11-09:** Git repo cleaned before the first push. Old animation outputs in `figures/` deleted and purged from history. `refs/` is now git-ignored and purged from history (kept locally). Stray outputs in `figures/` are ignored, while `figures/out/` (used by the slides) and all generating code stay tracked. `CONTEXT.md` and `PLAN.md` are tracked. Added LICENSE (CC BY 4.0) and a License section in the README.
 
+- **2026-11-09:** Logos added. Cover: Departamento de Física + CMA bottom-left, GloBIAS + LABI bottom-right, footer hidden. Thank-you slide (which also holds the contact details): logos of CMA, Departamento de Física, FUNDACEN, GloBIAS and LABI, plus a credit line for the NEUBIAS training resources. Display copies made of the CMA logo (subtitle width fixed) and the LABI logo (white original, cropped and recoloured dark).
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Working Group logistics: sign-up channel and meeting point at the conference
