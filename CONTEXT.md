@@ -124,6 +124,8 @@ Last updated: 2026-11-09.
 
 - **2026-11-11:** Slide 23 shows the original map (no common-core hub or arrows). `archipelago_route.png` and the code that drew it were removed.
 
+- **2026-11-11:** Slide 24 discussion questions: (1) What are the fundamentals of bioimage analysis? (2) How deep is deep enough? (3) What paths still need to be charted?
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)

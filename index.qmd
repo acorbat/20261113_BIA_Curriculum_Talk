@@ -572,9 +572,9 @@ or contact me later.
 **Let's discuss**
 
 ::: {.small}
-1. What is missing from the core?
+1. What are the fundamentals of bioimage analysis?
 2. How deep is deep enough?
-3. Who should own and maintain it?
+3. What paths still need to be charted?
 :::
 
 **Contact**
