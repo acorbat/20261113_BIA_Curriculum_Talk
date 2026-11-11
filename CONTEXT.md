@@ -122,6 +122,8 @@ Last updated: 2026-11-09.
 
 - **2026-11-11:** The archipelago illustration is cited: Rodríguez de la Ballina L. & Corbat A.A. (2026), *Navigating bioimage analysis* [Drawing], Zenodo, doi:10.5281/zenodo.23504308 (CC BY 4.0). The citation appears on slides 1, 2 and 23, in B5, and in the README. The README no longer lists the illustration as original material of this repo.
 
+- **2026-11-11:** Slide 23 shows the original map (no common-core hub or arrows). `archipelago_route.png` and the code that drew it were removed.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)

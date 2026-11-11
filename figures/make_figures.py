@@ -4,7 +4,6 @@
 
 Figures
   archipelago_labelled.png   slide 2  - the map with island labels
-  archipelago_route.png      slide 18 - the map with a charted common route
   pitfall_uint8.png          slide 4  - 200 + 100 = 44
   pitfall_saturation.png     slide 4  - clipping changes intensity ratios
   pitfall_anisotropy.png     slide 4  - forgetting the z-step
@@ -78,31 +77,17 @@ def archipelago():
     s = 0.5
     offsets = {"computer": (0, -330), "biology": (0, -300), "physics": (0, 330)}
 
-    for name, route in (("archipelago_labelled", False), ("archipelago_route", True)):
-        fig, ax = plt.subplots(figsize=(13.3, 9.5))
-        ax.imshow(im)
-        _clean(ax)
-        if not route:
-            for k, d in ISLANDS.items():
-                x, y = d["xy"][0] * s, d["xy"][1] * s
-                dx, dy = offsets[k]
-                ax.text(x + dx * s, y + dy * s, d["label"], ha="center", va="center", fontsize=24,
-                        fontweight="bold", color=d["color"],
-                        bbox=dict(boxstyle="round,pad=0.35", fc="white", ec=d["color"], lw=2, alpha=0.92))
-        else:
-            # a charted route: every island -> common core (compass-rose style hub) -> electives beyond
-            hub = np.array([2600, 1310]) * s
-            for k, d in ISLANDS.items():
-                p = np.array(d["xy"]) * s
-                ax.annotate("", xy=hub, xytext=p,
-                            arrowprops=dict(arrowstyle="-|>", lw=6, color=d["color"], ls=(0, (3, 1.5)),
-                                            shrinkA=30, shrinkB=46, mutation_scale=34,
-                                            connectionstyle="arc3,rad=0.12"))
-            ax.scatter(*hub, s=7500, color="white", ec=INK, lw=3.5, zorder=5)
-            ax.text(*hub, "common\ncore", ha="center", va="center", fontsize=17, fontweight="bold",
-                    color=INK, zorder=6, linespacing=1.0)
-        fig.savefig(OUT / f"{name}.png", dpi=110)
-        plt.close(fig)
+    fig, ax = plt.subplots(figsize=(13.3, 9.5))
+    ax.imshow(im)
+    _clean(ax)
+    for k, d in ISLANDS.items():
+        x, y = d["xy"][0] * s, d["xy"][1] * s
+        dx, dy = offsets[k]
+        ax.text(x + dx * s, y + dy * s, d["label"], ha="center", va="center", fontsize=24,
+                fontweight="bold", color=d["color"],
+                bbox=dict(boxstyle="round,pad=0.35", fc="white", ec=d["color"], lw=2, alpha=0.92))
+    fig.savefig(OUT / "archipelago_labelled.png", dpi=110)
+    plt.close(fig)
 
 
 # ===========================================================================

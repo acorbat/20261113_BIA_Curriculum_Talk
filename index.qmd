@@ -520,7 +520,7 @@ M = months after kick-off. A proposed timeline, to be agreed together.
 
 ::: {.columns}
 ::: {.column width="62%"}
-![](figures/out/archipelago_route.png){fig-alt="The archipelago map with dashed routes from all three islands converging on a common core."}
+![](img/2026016_Agus_archipielago.png){fig-alt="Folded map of an archipelago with three islands: computing (red), biology (teal) and optics (yellow), with sailboats travelling between them."}
 :::
 ::: {.column width="38%" .join}
 <br>
