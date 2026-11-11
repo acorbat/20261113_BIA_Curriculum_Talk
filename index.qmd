@@ -18,6 +18,8 @@ lang: en
 :::
 ::: {}
 ![](img/2026016_Agus_archipielago.png){fig-alt="Folded map of an archipelago with three islands: computing (red), biology (teal) and optics (yellow), with sailboats travelling between them."}
+
+[Illustration: Rodríguez de la Ballina & Corbat (2026), *Navigating bioimage analysis*, Zenodo, doi:10.5281/zenodo.23504308]{.map-credit}
 :::
 :::
 
@@ -59,6 +61,8 @@ lang: en
 :::
 :::
 :::
+
+[Illustration: Rodríguez de la Ballina & Corbat (2026), *Navigating bioimage analysis*, Zenodo, doi:10.5281/zenodo.23504308]{.cite}
 
 ::: {.notes}
 **0:30 → 1:30.** Show of hands, one per island. Look around: we all do "bioimage analysis", but we arrived from very different places. Different maps, different blind spots.
@@ -535,6 +539,8 @@ or contact me later.
 :::
 :::
 
+[Illustration: Rodríguez de la Ballina & Corbat (2026), *Navigating bioimage analysis*, Zenodo, doi:10.5281/zenodo.23504308]{.cite}
+
 ::: {.notes}
 **18:45 → 19:30.** If you want to help draw this chart, come and find me during the meeting, or contact me later. Everyone is welcome, from any island. All three routes, one common core.
 :::
@@ -643,4 +649,5 @@ audience_prior_knowledge: {biology: low, physics: medium, computer_science: low}
 - Haase R. *BioImage Analysis* lecture series (YouTube) · ZIDAS · NEUBIAS Academy
 - Zhang B, Zerubia J, Olivo-Marin J-C (2007). Gaussian approximations of fluorescence microscope PSF models. *Appl. Opt.* 46:1819–1829
 - Microtubule image: *Fluorescent Cells* (BPAE cells, anti-tubulin channel), ImageJ/Fiji sample image, public domain
+- Archipelago illustration: Rodríguez de la Ballina L, Corbat AA (2026). *Navigating bioimage analysis* [Drawing]. Zenodo. doi:10.5281/zenodo.23504308 (CC BY 4.0)
 - Curriculum prototype: github.com/acorbat/bia_curriculum (CC BY 4.0)

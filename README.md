@@ -45,7 +45,7 @@ If you name the repo something other than `20261113_BIA_Curriculum_Talk`, update
 
 ## License
 
-Original material in this repository (slides, text, figures, code and the archipelago illustration) is licensed under the
+Original material in this repository (slides, text, figures and code) is licensed under the
 **Creative Commons Attribution 4.0 International (CC BY 4.0)** license; see [`LICENSE`](LICENSE) or
 <https://creativecommons.org/licenses/by/4.0/>. Please attribute it to **Agustín Corbat** and link to this repository.
 Third-party material keeps its own terms (see Credits); this license does not relicense it.
@@ -55,6 +55,9 @@ width fixed for machines without the original fonts) and `labi_logo_color_slides
 `Isologotipo versión extendida.png`, cropped to remove its empty margins).
 
 ## Credits
+
+- Archipelago illustration: Rodríguez de la Ballina, L. & Corbat, A. A. (2026). *Navigating bioimage analysis* [Drawing].
+  Zenodo. <https://doi.org/10.5281/zenodo.23504308> (CC BY 4.0).
 
 - Microtubule image: *Fluorescent Cells* (BPAE cells, anti-tubulin channel), ImageJ/Fiji sample image, public domain.
 - Module data: NEUBIAS Bioimage Analysis Training Resources (CC BY 4.0); Tischer et al. 2026, *J. Microsc.* 304:3–14.

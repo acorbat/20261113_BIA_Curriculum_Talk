@@ -120,6 +120,8 @@ Last updated: 2026-11-09.
 
 - **2026-11-11:** Slide 22 deliverables reordered: M3 is the baseline v0.1 (mapped to modules, gaps made visible), M6 the community survey, and M12 is **Charted paths**. Analysts are born on one island and become bioimage analysts by travelling to others; the curriculum charts those journeys.
 
+- **2026-11-11:** The archipelago illustration is cited: Rodríguez de la Ballina L. & Corbat A.A. (2026), *Navigating bioimage analysis* [Drawing], Zenodo, doi:10.5281/zenodo.23504308 (CC BY 4.0). The citation appears on slides 1, 2 and 23, in B5, and in the README. The README no longer lists the illustration as original material of this repo.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)

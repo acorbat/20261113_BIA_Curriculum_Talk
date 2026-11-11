@@ -159,3 +159,6 @@ table.matrix th.row { text-align: right; }
          color: $muted; margin: 18px 0 2px 0; }
 .reveal .logo-wall .logo-labi[src$=".png"], .reveal .logos-corner .logo-labi[src$=".png"] { height: 70px; }
 .join { font-size: 1.05em; line-height: 1.5; }
+
+/* Illustration credit under the cover map ------------------------------------- */
+.map-credit { display: block; font-size: 15px; color: $muted; text-align: right; margin-top: -10px; }
