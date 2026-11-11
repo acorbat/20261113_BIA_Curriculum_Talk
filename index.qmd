@@ -486,19 +486,19 @@ M0
 ::: {.dot}
 M3
 :::
-**Community survey**<br>on the core<br><span class="muted">what is essential? how deep?</span>
+**Baseline v0.1**<br>mapped to modules<br><span class="muted">gaps made visible</span>
 :::
 ::: {.m}
 ::: {.dot}
 M6
 :::
-**Baseline v0.1**<br>mapped to modules<br><span class="muted">gaps made visible</span>
+**Community survey**<br>on the core<br><span class="muted">what is essential? how deep?</span>
 :::
 ::: {.m}
 ::: {.dot}
 M12
 :::
-**Electives & bridges**<br>mapped to modules<br><span class="muted">a first full map</span>
+**Charted paths**<br>from every island<br><span class="muted">bridges · core · electives</span>
 :::
 :::
 
@@ -509,7 +509,7 @@ M = months after kick-off. A proposed timeline, to be agreed together.
 :::
 
 ::: {.notes}
-**17:45 → 18:45.** A concrete first year: kick off now; survey the community on the core in three months; a v0.1 baseline mapped to existing modules at six months; and electives and bridge modules mapped at twelve. (M = months after kick-off.)
+**17:45 → 18:45.** A concrete first year: kick off now; a v0.1 baseline mapped to existing modules in three months, so the gaps become visible; a community survey on the core at six months; and at twelve, charted paths: routes from every island through bridges, the core and electives. Analysts are born on one island and become bioimage analysts by travelling to the others; the curriculum charts those journeys. (M = months after kick-off.)
 :::
 
 ## Join us

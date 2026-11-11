@@ -118,6 +118,8 @@ Last updated: 2026-11-09.
   - Slide 23 has no links or QR codes; it just says "find me during the meeting, or contact me later".
   - Slide 24 has two acknowledgement groups (support: FUNDACEN, GloBIAS, Departamento de Física; discussions: CMA, LABI) and a Contact subtitle. Its deck QR code moved to slide 23 ("These slides"), the only link in the deck.
 
+- **2026-11-11:** Slide 22 deliverables reordered: M3 is the baseline v0.1 (mapped to modules, gaps made visible), M6 the community survey, and M12 is **Charted paths**. Analysts are born on one island and become bioimage analysts by travelling to others; the curriculum charts those journeys.
+
 ## 5. Open items / to confirm with speaker
 - Rehearse and check timing (20 min)
 - Create the GitHub repo (`acorbat/globias2026-bia-curriculum-talk`?)
